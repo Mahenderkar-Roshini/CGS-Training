@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div class="card shadow-lg p-5 rounded-3" style="max-width: 900px; width: 100%; border-radius: 20px;">
+        <div class="row no-gutters align-items-center">
+            <div class="col-md-6 d-flex flex-column align-items-center justify-content-center border-right" style="padding: 30px;">
+                <img src="R.jpg" alt="Gmail Logo" class="m-3 justify-content-start" style="max-width: 100px;">
+                <h5 class="text-center">SignUp</h5>
+            </div>
+            <div class="col-md-6" style="padding: 30px;">
+                <form id="loginForm">
+                    <div class="form-group mb-3"><b>Enter your Email Id</b>
+                        <input type="email" class="form-control rounded-pill" id="mailId" placeholder="Email">
+                        <small class="text-danger" id="emailError" style="display: none;">Please enter a valid email.</small>
+                    </div>
+                    <div class="form-group mb-3"><b>Enter your Password</b>
+                        <input type="password" class="form-control rounded-pill" id="password" placeholder="Enter your password">
+                    </div>
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="showPassword">
+                        <label class="form-check-label" for="showPassword">Show password</label>
+                    </div>
+                    <div class="form-group mb-3"><b>Confirm Password</b>
+                        <input type="password" class="form-control rounded-pill" id="confirmPassword" placeholder="Confirm password">
+                        <small class="text-danger" id="passwordError" style="display: none;">Passwords do not match.</small>
+                    </div>
+                    <div>
+                        <p><b>Login as:</b></p>
+                        <input type="radio" name="user" id="vendor" value="Vendor">
+                        <label for="vendor">Vendor</label>
+                        <input type="radio" name="user" id="admin" value="Admin">
+                        <label for="admin">Admin</label>
+                    </div>
+                    
+                    <button type="button" id="nextBtn" class="btn btn-primary btn-block rounded-pill">SignUP</button>
+                </form>
+                <div id="details" class="mt-3" style="display: none;">
+                    <h6>Entered Details:</h6>
+                    <p id="displayEmail"></p>
+                    <p id="displayPassword"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script src="signup.js"></script>
+</body>
+</html>

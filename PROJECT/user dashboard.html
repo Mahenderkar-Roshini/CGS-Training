@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Management System - User Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: white;
+            height: 100vh;
+            padding: 20px;
+            position: fixed;
+        }
+        .sidebar a {
+            color: white;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            margin: 10px 0;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .main-content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            margin-top: 0;
+        }
+        .task-list li {
+            list-style-type: none;
+            background-color: #f9f9f9;
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 5px solid #4CAF50;
+        }
+        .notification-list li {
+            list-style-type: none;
+            background-color: #f9f9f9;
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 5px solid #FF9800;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Vendor Management System - User Dashboard</h1>
+    </div>
+
+    <div class="sidebar">
+        <h3>Dashboard</h3>
+        <a href="#vendors">Vendors</a>
+        <a href="#tasks">Tasks</a>
+        <a href="#notifications">Notifications</a>
+        <a href="#account-settings">Account Settings</a>
+        <a href="#logout">Logout</a>
+    </div>
+
+    <div class="main-content">
+        <div class="card" id="vendors">
+            <h2>Vendor Information</h2>
+            <table border="1" cellpadding="10" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Vendor Name</th>
+                        <th>Service</th>
+                        <th>Status</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Vendor A</td>
+                        <td>Logistics</td>
+                        <td>Active</td>
+                        <td>vendorA@email.com</td>
+                    </tr>
+                    <tr>
+                        <td>Vendor B</td>
+                        <td>IT Services</td>
+                        <td>Pending</td>
+                        <td>vendorB@email.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card" id="tasks">
+            <h2>Tasks</h2>
+            <ul class="task-list">
+                <li>Complete vendor review for Vendor A</li>
+                <li>Approve Vendor B's pending contract</li>
+                <li>Schedule meeting with Vendor C</li>
+            </ul>
+            <button class="btn">View All Tasks</button>
+        </div>
+
+        <div class="card" id="notifications">
+            <h2>Notifications</h2>
+            <ul class="notification-list">
+                <li>Vendor A has updated their contact details</li>
+                <li>Vendor B's contract is pending approval</li>
+                <li>New vendor Vendor C registered in the system</li>
+            </ul>
+            <button class="btn">View All Notifications</button>
+        </div>
+
+        <div class="card" id="account-settings">
+            <h2>Account Settings</h2>
+            <p>Username: JohnDoe</p>
+            <p>Email: johndoe@email.com</p>
+            <button class="btn">Edit Account Settings</button>
+        </div>
+    </div>
+     <script src="login.js"></script>
+     
+</body>
+</html>

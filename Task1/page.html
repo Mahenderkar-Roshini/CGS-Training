@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="converter-container bg-white">
+        <h1>Temperature Converter</h1>
+        <form id="converterForm">
+            <div class="form-group">
+                <label for="inputTemp">Enter Temperature:</label>
+                <input type="number" id="inputTemp" placeholder="Enter value" required>
+            </div>
+            <div class="form-group">
+                <label for="convertFrom">Convert From:</label>
+                <select id="convertFrom">
+                    <option value="Celsius">Celsius</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="convertTo">Convert To:</label>
+                <select id="convertTo">
+                    <option value="Celsius">Celsius</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                </select>
+            </div>
+            <button type="submit ">Convert</button>
+        </form>
+        <div id="result" class="result-output"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

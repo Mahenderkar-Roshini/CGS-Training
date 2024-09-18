@@ -1,0 +1,27 @@
+{
+    "users": [
+      {
+        "username": "user1",
+        "password": "password1",
+        "role": "User"
+      },
+      {
+        "username": "user2",
+        "password": "password2",
+        "role": "User"
+      }
+    ],
+    "vendors": [
+      {
+        "username": "vendor1",
+        "password": "vendorpassword1",
+        "role": "Vendor"
+      },
+      {
+        "username": "vendor2",
+        "password": "vendorpassword2",
+        "role": "Vendor"
+      }
+    ]
+  }
+  

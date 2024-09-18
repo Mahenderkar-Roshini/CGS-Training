@@ -1,0 +1,31 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "username": "john_doe",
+        "password": "password123",
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "isAdmin": false
+      },
+      {
+        "id": 2,
+        "username": "jane_smith",
+        "password": "password456",
+        "name": "Jane Smith",
+        "email": "jane.smith@example.com",
+        "isAdmin": false
+      },
+      {
+        "id": 3,
+        "username": "admin_user",
+        "password": "adminpass",
+        "name": "Admin User",
+        "email": "admin@example.com",
+        "isAdmin": true
+      }
+    ]
+  }
+
+  
+  

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail Login</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="GmailLogin.css">
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div class="card shadow-lg p-5 rounded-3" style="max-width: 900px; width: 100%; border-radius: 20px;">
+        <div class="row no-gutters align-items-center">
+     
+            <div class="col-md-6 d-flex flex-column align-items-center justify-content-center border-right" style="padding: 30px;">
+                <img src="google.jpeg" alt="Gmail Logo" class="m-3 justify-content-start" style="max-width: 100px;">
+                <h5 class="text-center">Hi, [User Name]</h5>
+            
+                <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle email-dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        useremail@gmail.com
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Switch Account</a>
+                        <a class="dropdown-item" href="#">Sign Out</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" style="padding: 30px;">
+                <form>
+                    <div class="form-group mb-3">
+                        <input type="text" class="form-control rounded-pill" id="User Name" placeholder="User Name">
+
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="password" class="form-control rounded-pill" id="password" placeholder="Enter your password">
+                    </div>
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="showPassword">
+                        <label class="form-check-label" for="showPassword">Show password</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="user" id="">
+                        <label for="">user</label>
+                        <input type="radio" name="user" id="">
+                        <label for="">admin</label>
+                    </div>
+                    <a href="#" class="d-block mb-3 text-primary" style="font-size: 0.9em;">Forgot password?</a>
+                    <button type="submit" class="btn btn-primary btn-block rounded-pill">Next</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

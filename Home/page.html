@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Website</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            text-align: center;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .FOTTER {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: black;
+        }
+
+        footer {
+            background: black;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 class="text" style="background-color: teal;">CGS TRAINING</h1>
+</header>
+
+<div class="container" >
+    <div class="gallery" style="background-color: grey; m-3 p-1">
+        <div class="gallery-item">
+            <img src="A.jpg" style="padding-top: 6px;" alt="">
+            <div class="ass" >Assignment-1</div>
+        </div>
+        <div class="gallery-item">
+            <img src="A.jpg" style="padding-top: 6px;" alt="">
+            <div class="price">Assignment-2</div>
+        </div>
+        <div class="gallery-item">
+            <img src="A.jpg" style="padding-top: 6px;" alt="">
+            <div class="price">Assignment-3</div>
+        </div>
+        <div class="gallery-item">
+            <img src="A.jpg" style="padding-top: 6px;" alt="">
+            <div class="price">Assignment-4</div>
+        </div>
+        <div class="gallery-item">
+            <img src="A.jpg" alt="">
+            <div class="price">Assignment-5</div>
+        </div>
+        <div class="gallery-item">
+            <img src="A.jpg" alt="">
+            <div class="price">Assignment-6</div>
+        </div>
+        <div class="gallery-item">
+            <img src="A.jpg" alt="">
+            <div class="price">Assignment-7</div>
+        </div>
+        <div class="gallery-item">
+                <img src="A.jpg" alt="">
+                <div class="price">Assignment-8</div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© CGS TRAINING 2024</p>
+</footer>
+
+</body>
+</html>

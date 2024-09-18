@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: white;
+            height: 100vh;
+            padding: 20px;
+            position: fixed;
+        }
+
+        .sidebar a {
+            color: white;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            margin: 10px 0;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .main-content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .task-list li, .notification-list li {
+            list-style-type: none;
+            background-color: #f9f9f9;
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 5px solid #4CAF50;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Login form styles */
+        .vh-100 {
+            height: 100vh;
+        }
+    </style>
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100 bg-light">
+
+    <div class="card shadow-lg p-5 rounded-3" style="max-width: 900px; width: 100%; border-radius: 20px;">
+        <div class="row no-gutters align-items-center">
+            <div class="col-md-6 d-flex flex-column align-items-center justify-content-center border-right" style="padding: 30px;">
+                <img src="R.jpg" alt="Logo" class="m-3 justify-content-start" style="max-width: 100px;">
+                <h5 class="text-center">Login</h5>
+            </div>
+            <div class="col-md-6" style="padding: 30px;">
+                <form id="loginForm">
+                    <div class="form-group mb-3"><b>Enter your User Name</b>
+                        <input type="text" class="form-control rounded-pill" id="user" placeholder="user name">
+                    </div>
+                    <div class="form-group mb-3"><b>Enter your Password</b>
+                        <input type="password" class="form-control rounded-pill" id="password" placeholder="password">
+                    </div>
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="showPassword">
+                        <label class="form-check-label" for="showPassword">Show password</label>
+                    </div>
+                    
+                    <a href="#" class="d-block mb-3 text-primary" style="font-size: 0.9em;">Forgot password</a>
+                    <div>
+                        <p><b>Login as:</b></p>
+                        <input type="radio" name="role" id="userRole" value="User" required>
+                        <label for="userRole">User</label>
+
+                        <input type="radio" name="role" id="vendorRole" value="Vendor">
+                        <label for="vendorRole">Vendor</label>
+                    </div>
+                    <button type="button" id="loginBtn" class="btn btn-primary btn-block rounded-pill">Login</button>
+                </form>
+                <div id="details" class="mt-3" style="display: none;">
+                    <h6>Entered Details:</h6>
+                    <p id="displayEmail"></p>
+                    <p id="displayPassword"></p>
+                </div>
+            </div>
+        </div>
+        <p class="mt-3 text-center">
+            Don't have an account? <a href="signup.html">Sign Up</a>
+        </p>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="loginToast" style="position: absolute; bottom: 20px; right: 20px;" data-delay="3000">
+        <div class="toast-header">
+            <strong class="mr-auto">Login Successful</strong>
+            <small>Just now</small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body">
+            Redirecting to your dashboard...
+        </div>
+        <a href="user dashboard.html"></a>
+        <a href="Vendor DashBoard.html"></a>
+    </div>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+
+    <script>
+        document.getElementById('showPassword').addEventListener('change', function () {
+            const passwordField = document.getElementById('password');
+            if (this.checked) {
+                passwordField.type = 'text';
+            } else {
+                passwordField.type = 'password';
+            }
+        });
+    
+        document.getElementById('loginBtn').addEventListener('click', function () {
+            const user = document.getElementById('user').value;
+            const password = document.getElementById('password').value;
+            const role = document.querySelector('input[name="role"]:checked').value;
+    
+            // You can replace this with actual login validation logic
+            if (user === "" || password === "") {
+                alert("Please enter both username and password.");
+                return;
+            }
+    
+            // Simulate login and redirect to the appropriate page based on role and credentials
+            if (role === 'User') {
+                if (user === "newuser" && password === "password") {
+                    // Redirect to new user page
+                    window.location.href = "user dashboard.html";
+                } else {
+                    alert("Invalid User login credentials.");
+                }
+            } else if (role === 'Vendor') {
+                if (user === "newvendor" && password === "password") {
+                    // Redirect to new vendor page
+                    window.location.href = "Vendor DashBoard.html";
+                } else {
+                    alert("Invalid Vendor login credentials.");
+                }
+            }
+        });
+    </script>
+    
+   
+</body>
+</html>

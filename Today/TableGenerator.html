@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        input[type="number"] {
+            width: 50px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Dynamic Table Generator</h2>
+
+    <form id="tableForm">
+        <label for="rows">Rows:</label>
+        <input type="number" id="rows" name="rows" min="1" required>
+        <label for="columns">Columns:</label>
+        <input type="number" id="columns" name="columns" min="1" required>
+        <button type="submit">Generate Table</button>
+    </form>
+
+    <div id="tableContainer"></div>
+
+    <script>
+        document.getElementById('tableForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Get the number of rows and columns from the input
+            const rows = document.getElementById('rows').value;
+            const columns = document.getElementById('columns').value;
+
+            // Get the table container
+            const tableContainer = document.getElementById('tableContainer');
+            tableContainer.innerHTML = ''; // Clear previous table if any
+
+            // Create a table element
+            const table = document.createElement('table');
+
+            // Use loops to generate rows and columns
+            for (let i = 0; i < rows; i++) {
+                const row = document.createElement('tr');
+                for (let j = 0; j < columns; j++) {
+                    const cell = document.createElement('td');
+                    // Make the cell content editable
+                    cell.contentEditable = true;
+                    cell.innerText = `R${i+1}C${j+1}`; // Default cell content
+                    row.appendChild(cell);
+                }
+                table.appendChild(row);
+            }
+
+            // Append the generated table to the table container
+            tableContainer.appendChild(table);
+        });
+    </script>
+
+</body>
+</html>

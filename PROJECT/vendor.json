@@ -1,0 +1,33 @@
+[
+    {
+      "id": 101,
+      "username": "VendorCorp",
+      "email": "contact@vendorcorp.com",
+      "password": "Vendor1234!"
+    },
+    {
+      "id": 102,
+      "username": "SupplyPro",
+      "email": "support@supplypro.com",
+      "password": "SupplyPro987#"
+    },
+    {
+      "id": 103,
+      "username": "EliteServices",
+      "email": "info@eliteservices.com",
+      "password": "Elite2023@"
+    },
+    {
+      "id": 104,
+      "username": "TechSupply",
+      "email": "admin@techsupply.com",
+      "password": "TechPass!2023"
+    },
+    {
+      "id": 105,
+      "username": "BizSolutions",
+      "email": "sales@bizsolutions.com",
+      "password": "BizSol$5678"
+    }
+  ]
+  

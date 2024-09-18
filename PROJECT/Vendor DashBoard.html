@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Management Dashboard</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        .sidebar {
+            height: 100vh;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .table-responsive {
+            margin-top: 20px;
+        }
+        .abc{
+            height:50px;
+            width:50px;
+            justify-content: end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            
+            <nav class="col-md-2 sidebar">
+                <img src="R.jpg" alt="">
+                <h4>Vendor Dashboard</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Manage Vendors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Settings</a>
+                    </li>
+                </ul>
+            </nav>
+
+            
+            <main role="main" class="col-md-10 px-4 main-content">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1>Dashboard</h1>
+                    </div>
+                    <div class="col-md-4 text-item-end align-items-end justify-content-end">
+                        <img src="R.jpg" alt="Profile" class="abc">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Vendors</h5>
+                                <p class="card-text">150</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Active Vendors</h5>
+                                <p class="card-text">120</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Pending Approvals</h5>
+                                <p class="card-text">15</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="table-responsive">
+                    <h3>Vendor List</h3>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Vendor Name</th>
+                                <th>Contact</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Vendor A</td>
+                                <td>contact@vendorA.com</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Vendor B</td>
+                                <td>contact@vendorB.com</td>
+                                <td>Pending</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Vendor C</td>
+                                <td>contact@vendorC.com</td>
+                                <td>Active</td>
+                            </tr>
+                        
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="login.js"></script>
+    
+</body>
+</html>
