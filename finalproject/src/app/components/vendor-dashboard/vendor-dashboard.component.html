@@ -1,0 +1,78 @@
+<div class="container-fluid">
+  <div class="row">
+    <main role="main" class="col-md-12 px-4 main-content">
+      <router-outlet></router-outlet>
+      <div class="row">
+        <div class="col-md-8">
+          <h1>Vendor Dashboard</h1>
+        </div>
+        <div class="col-md-4 text-right">
+          <a class="nav-link" href="#" (click)="logout()">Logout</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h4><a href="#" (click)="showActiveVendors(); $event.preventDefault()">Active Vendors
+                <!-- <h5 class="card-title">Active Vendors</h5> -->
+                <p class="card-text">{{ activeVendors.length }}</p>
+                <!-- <button (click)="showActiveVendors()">Active Vendors</button> -->
+              </a></h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h4><a href="#" (click)="showPendingApprovals(); $event.preventDefault()">Pending Approvals
+                <!-- <h5 class="card-title">Pending Approvals</h5> -->
+                <p class="card-text">{{ pendingVendors.length }}</p>
+                <!-- <button (click)="showPendingApprovals()">Pending Approvals</button> -->
+              </a></h4>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h4><a href="#" (click)="showTotalVendors(); $event.preventDefault()">Total Vendors
+                <!-- <h5 class="card-title">Pending Approvals</h5> -->
+                <p class="card-text">{{ TotalVendors.length }}</p>
+                <!-- <button (click)="showPendingApprovals()">Pending Approvals</button> -->
+              </a></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-responsive" *ngIf="showVendorsList">
+        <h3>{{ currentVendorView }}</h3>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Vendor Name</th>
+              <th>MailId</th>
+              <th>Status</th>
+              <th>Services</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let vendor of displayedVendors; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ vendor.name }}</td>
+              <td>{{ vendor.email }}</td>
+              <td>{{ vendor.status }}</td>
+              <td>{{ vendor.services }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>

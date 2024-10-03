@@ -1,0 +1,111 @@
+<!-- src/app/components/user-dashboard/user-dashboard.component.html -->
+
+<div class="header">
+  <h1>User Dashboard</h1>
+</div>
+
+<div class="sidebar">
+  <h3>Dashboard</h3>
+  <!-- Using [routerLink] with fragment navigation -->
+  <a [routerLink]="[]" fragment="vendors">Vendors</a>
+  <a [routerLink]="[]" fragment="tasks">Tasks</a>
+  <a [routerLink]="[]" fragment="notifications">Notifications</a>
+  <!-- <a [routerLink]="[]" fragment="account-settings">Account Settings</a> -->
+  <a href="#" (click)="logout()">Logout</a>
+</div>
+
+<div class="main-content">
+  <div class="card" id="vendors">
+    <h2>Vendor Information</h2>
+    <table [border]="1" cellpadding="10" cellspacing="0" class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Vendor Name</th>
+          <th>Service</th>
+          <th>Status</th>
+          <th>Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Surender</td>
+          <td>Kids Wear</td>
+          <td>Active</td>
+          <td>surender@email.com</td>
+        </tr>
+        <tr>
+          <td>Kiran</td>
+          <td>Shirts</td>
+          <td>Pending</td>
+          <td>kiran@email.com</td>
+        </tr>
+
+        <tr>
+          <td>Pream</td>
+          <td>Towels</td>
+          <td>Active</td>
+          <td>pream@email.com</td>
+        </tr>
+
+        <tr>
+          <td>Priya</td>
+          <td>Sarees</td>
+          <td>Active</td>
+          <td>priya@email.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card" id="tasks">
+    <h2>Tasks</h2>
+    <ul class="task-list">
+      <!-- Show first 3 tasks -->
+      <ng-container *ngFor="let task of tasks | slice: 0: 3">
+        <li>{{ task }}</li>
+      </ng-container>
+  
+      <!-- Show all tasks if 'showAllTasks' is true -->
+      <ng-container *ngIf="showAllTasks">
+        <ng-container *ngFor="let task of tasks | slice: 3">
+          <li>{{ task }}</li>
+        </ng-container>
+      </ng-container>
+    </ul>
+  
+    <!-- Toggle 'View All' and 'Show Less' based on flag -->
+    <button class="btn btn-primary" (click)="toggleTasks()">
+      {{ showAllTasks ? 'Show Less' : 'View All Tasks' }}
+    </button>
+  </div>
+  
+  <div class="card" id="notifications">
+    <h2>Notifications</h2>
+    <ul class="notification-list">
+      <!-- Show first 3 notifications -->
+      <ng-container *ngFor="let notification of notifications | slice: 0: 3">
+        <li>{{ notification }}</li>
+      </ng-container>
+  
+      <!-- Show all notifications if 'showAllNotifications' is true -->
+      <ng-container *ngIf="showAllNotifications">
+        <ng-container *ngFor="let notification of notifications | slice: 3">
+          <li>{{ notification }}</li>
+        </ng-container>
+      </ng-container>
+    </ul>
+  
+    <!-- Toggle 'View All' and 'Show Less' based on flag -->
+    <button class="btn btn-primary" (click)="toggleNotifications()">
+      {{ showAllNotifications ? 'Show Less' : 'View All Notifications' }}
+    </button>
+  </div>
+
+
+  
+  
+
+  
+
+
+</div>
